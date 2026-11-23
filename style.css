@@ -61,6 +61,10 @@ nav ul a:hover{color:var(--navy)}
 .bars .t{height:14px;background:#f1ece3;border-radius:7px;overflow:hidden}
 .bars .f{display:block;height:100%;background:var(--navy);border-radius:7px}
 .bars .n{font-weight:600;text-align:right;color:var(--navy)}
+.gains{list-style:none;margin-top:24px}
+.gains li{padding:12px 0 12px 28px;border-top:1px solid var(--line);position:relative;color:var(--muted);font-size:17px}
+.gains li::before{content:"✓";position:absolute;left:0;color:var(--navy);font-weight:700}
+.gains b{color:var(--navy);font-weight:600}
 .src{font-size:15px;color:var(--muted);margin-top:18px}
 @media(max-width:880px){.data .wrap{grid-template-columns:1fr;gap:32px}}
 @media(max-width:480px){.bars li{grid-template-columns:110px 1fr 42px;font-size:15px}}
