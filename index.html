@@ -10,8 +10,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#faf7f2; --surface:#ffffff; --ink:#1d1b18; --muted:#615b52;
-    --line:#e6dfd4; --accent:#1f5f4a; --accent-ink:#ffffff; --warm:#e8a33d;
+    /* 60% base creme · 30% azul-marinho · 10% verde WhatsApp (só nos botões) */
+    --bg:#F7F3EC; --surface:#ffffff; --ink:#1b1f2a; --muted:#5b5f6b;
+    --line:#e5ddd0; --accent:#14213D; --accent-soft:#e6e9f0;
+    --cta:#25D366; --cta-ink:#14213D; --warm:#e8a33d;
     --radius:14px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
@@ -24,7 +26,7 @@
   .eyebrow{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
   h2{font-size:clamp(28px,4vw,40px);margin-bottom:16px}
   .lead{color:var(--muted);max-width:620px}
-  .btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:15px 24px;border-radius:999px;transition:transform .15s}
+  .btn{display:inline-flex;align-items:center;gap:10px;background:var(--cta);color:var(--cta-ink);text-decoration:none;font-weight:700;padding:15px 24px;border-radius:999px;transition:transform .15s}
   .btn:hover{transform:translateY(-2px)}
   .btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
 
@@ -42,7 +44,7 @@
   .hero{padding:80px 0 96px}
   .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
   .hero h1{font-size:clamp(38px,6vw,62px);margin-bottom:22px}
-  .hero h1 em{font-style:normal;color:var(--accent)}
+  .hero h1 em{font-style:italic;font-weight:500;color:var(--accent)}
   .hero p{font-size:19px;color:var(--muted);margin-bottom:32px;max-width:520px}
   .hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
   .hero .note{margin-top:22px;font-size:14px;color:var(--muted)}
@@ -50,11 +52,11 @@
   .mock .bar{display:flex;gap:6px;padding:12px 14px;border-bottom:1px solid var(--line)}
   .mock .bar i{width:10px;height:10px;border-radius:50%;background:var(--line)}
   .mock .body{padding:22px}
-  .mock .tag{display:inline-block;font-size:12px;background:#e7f0ec;color:var(--accent);padding:4px 10px;border-radius:99px;font-weight:600}
+  .mock .tag{display:inline-block;font-size:12px;background:var(--accent-soft);color:var(--accent);padding:4px 10px;border-radius:99px;font-weight:600}
   .mock h3{font-size:24px;margin:12px 0 6px}
   .mock .stars{color:var(--warm);font-size:14px;margin-bottom:16px}
   .mock .rows div{height:10px;background:#f0ebe3;border-radius:6px;margin-bottom:8px}
-  .mock .wa{margin-top:18px;background:#25d366;color:#fff;text-align:center;padding:11px;border-radius:10px;font-weight:600;font-size:15px}
+  .mock .wa{margin-top:18px;background:var(--cta);color:var(--cta-ink);text-align:center;padding:11px;border-radius:10px;font-weight:600;font-size:15px}
   @media(max-width:860px){.hero .wrap{grid-template-columns:1fr}.mock{max-width:420px}}
 
   /* problem */
@@ -86,7 +88,7 @@
   .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px;align-items:stretch}
   .plan{background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:30px;display:flex;flex-direction:column}
   .plan.hl{background:var(--accent);color:#fff;border-color:var(--accent)}
-  .plan.hl .muted,.plan.hl li{color:#d7e8e0}
+  .plan.hl .muted,.plan.hl li{color:#c9d2e6}
   .plan h3{font-size:22px}
   .plan .muted{color:var(--muted);font-size:15px;margin:4px 0 20px}
   .plan .price{font-family:Fraunces,serif;font-size:36px;font-weight:700}
@@ -95,15 +97,14 @@
   .plan ul{list-style:none;flex:1;margin-bottom:26px}
   .plan li{font-size:15px;padding:6px 0 6px 26px;position:relative;color:var(--muted)}
   .plan li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
-  .plan.hl li::before{color:var(--warm)}
+  .plan.hl li::before{color:#ffffff}
   .plan .btn{justify-content:center}
-  .plan.hl .btn{background:#fff;color:var(--accent)}
   .plans-note{margin-top:20px;font-size:14px;color:var(--muted)}
   @media(max-width:900px){.plans{grid-template-columns:1fr}}
 
   /* about */
   .about .wrap{display:grid;grid-template-columns:280px 1fr;gap:56px;align-items:center}
-  .photo{aspect-ratio:1;border-radius:50%;background:linear-gradient(135deg,#d9e7e0,#f3e2c4);display:grid;place-items:center;font-family:Fraunces,serif;font-size:72px;color:var(--accent);border:6px solid var(--surface);box-shadow:0 20px 40px -20px rgba(0,0,0,.25)}
+  .photo{aspect-ratio:1;border-radius:50%;background:linear-gradient(135deg,#dfe4ef,#efe6d6);display:grid;place-items:center;font-family:Fraunces,serif;font-size:72px;color:var(--accent);border:6px solid var(--surface);box-shadow:0 20px 40px -20px rgba(0,0,0,.25)}
   .about p{color:var(--muted);margin-bottom:14px}
   @media(max-width:760px){.about .wrap{grid-template-columns:1fr}.photo{max-width:200px}}
 
@@ -115,9 +116,9 @@
   details p{color:var(--muted);margin-top:10px}
 
   /* cta */
-  .final{background:var(--ink);color:#fff;text-align:center}
+  .final{background:var(--accent);color:#fff;text-align:center}
   .final h2{color:#fff}
-  .final p{color:#bdb6aa;margin:0 auto 32px;max-width:540px}
+  .final p{color:#c9d2e6;margin:0 auto 32px;max-width:540px}
   footer{padding:28px 0;font-size:14px;color:var(--muted);text-align:center}
 
   .wa-float{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 24px rgba(0,0,0,.25);z-index:20}
@@ -290,7 +291,7 @@
   <div class="wrap">
     <h2>Vamos colocar seu negócio no Google?</h2>
     <p>Me chama no WhatsApp. Te mostro uma prévia do seu site sem compromisso.</p>
-    <a class="btn" style="background:#25d366" href="https://wa.me/5531983663689?text=Ol%C3%A1%20Heitor!%20Quero%20ver%20uma%20pr%C3%A9via%20do%20site%20do%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+    <a class="btn" href="https://wa.me/5531983663689?text=Ol%C3%A1%20Heitor!%20Quero%20ver%20uma%20pr%C3%A9via%20do%20site%20do%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Chamar no WhatsApp</a>
   </div>
 </section>
 
