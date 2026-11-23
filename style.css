@@ -69,6 +69,15 @@ nav ul a:hover{color:var(--navy)}
 @media(max-width:880px){.data .wrap{grid-template-columns:1fr;gap:32px}}
 @media(max-width:480px){.bars li{grid-template-columns:110px 1fr 42px;font-size:15px}}
 
+/* exemplos */
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.case{display:block;text-decoration:none;border-radius:16px}
+.case img{display:block;width:100%;height:auto;aspect-ratio:8/5;object-fit:cover;object-position:top;border-radius:14px;border:1px solid var(--line);box-shadow:0 18px 36px -26px rgba(20,33,61,.45)}
+.case-t{display:block;font-family:var(--display);font-weight:700;font-size:20px;color:var(--navy);margin-top:16px}
+.case-d{display:block;font-size:16px;color:var(--muted)}
+.case:hover .case-t{text-decoration:underline;text-underline-offset:4px}
+@media(max-width:880px){.cases{grid-template-columns:1fr;gap:32px}}
+
 /* passos */
 .steps{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:44px;counter-reset:s}
 .steps li{counter-increment:s;border-top:2px solid var(--navy);padding-top:20px}
