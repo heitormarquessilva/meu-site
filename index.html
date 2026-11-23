@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Heitor Silva Sites | Sites para negócios em Belo Horizonte</title>
+<meta name="description" content="Sites profissionais para clínicas, consultórios, oficinas e comércios de Belo Horizonte. Apareça no Google e receba clientes pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#faf7f2; --surface:#ffffff; --ink:#1d1b18; --muted:#615b52;
+    --line:#e6dfd4; --accent:#1f5f4a; --accent-ink:#ffffff; --warm:#e8a33d;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.6;font-size:17px}
+  h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.15;font-weight:700}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  section{padding:88px 0}
+  .eyebrow{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+  h2{font-size:clamp(28px,4vw,40px);margin-bottom:16px}
+  .lead{color:var(--muted);max-width:620px}
+  .btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:15px 24px;border-radius:999px;transition:transform .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;height:66px}
+  .logo{font-family:Fraunces,serif;font-weight:700;font-size:20px;text-decoration:none}
+  .logo span{color:var(--accent)}
+  nav ul{display:flex;gap:28px;list-style:none;font-size:15px}
+  nav ul a{text-decoration:none;color:var(--muted)}
+  nav ul a:hover{color:var(--ink)}
+  @media(max-width:760px){nav ul{display:none}}
+
+  /* hero */
+  .hero{padding:80px 0 96px}
+  .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+  .hero h1{font-size:clamp(38px,6vw,62px);margin-bottom:22px}
+  .hero h1 em{font-style:normal;color:var(--accent)}
+  .hero p{font-size:19px;color:var(--muted);margin-bottom:32px;max-width:520px}
+  .hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .hero .note{margin-top:22px;font-size:14px;color:var(--muted)}
+  .mock{background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:0 30px 60px -30px rgba(40,30,10,.3);overflow:hidden}
+  .mock .bar{display:flex;gap:6px;padding:12px 14px;border-bottom:1px solid var(--line)}
+  .mock .bar i{width:10px;height:10px;border-radius:50%;background:var(--line)}
+  .mock .body{padding:22px}
+  .mock .tag{display:inline-block;font-size:12px;background:#e7f0ec;color:var(--accent);padding:4px 10px;border-radius:99px;font-weight:600}
+  .mock h3{font-size:24px;margin:12px 0 6px}
+  .mock .stars{color:var(--warm);font-size:14px;margin-bottom:16px}
+  .mock .rows div{height:10px;background:#f0ebe3;border-radius:6px;margin-bottom:8px}
+  .mock .wa{margin-top:18px;background:#25d366;color:#fff;text-align:center;padding:11px;border-radius:10px;font-weight:600;font-size:15px}
+  @media(max-width:860px){.hero .wrap{grid-template-columns:1fr}.mock{max-width:420px}}
+
+  /* problem */
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+  .stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+  .stat b{display:block;font-family:Fraunces,serif;font-size:44px;color:var(--accent);line-height:1}
+  .stat span{color:var(--muted);font-size:15px}
+  @media(max-width:760px){.stats{grid-template-columns:1fr}}
+
+  /* segments */
+  .alt{background:var(--surface);border-block:1px solid var(--line)}
+  .segs{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+  .seg{border:1px solid var(--line);border-radius:var(--radius);padding:22px;background:var(--bg)}
+  .seg .ico{font-size:28px;margin-bottom:10px}
+  .seg h3{font-size:19px;margin-bottom:6px}
+  .seg p{font-size:15px;color:var(--muted)}
+  @media(max-width:900px){.segs{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:480px){.segs{grid-template-columns:1fr}}
+
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:40px;counter-reset:s}
+  .step{counter-increment:s}
+  .step::before{content:counter(s);display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--accent);color:#fff;font-family:Fraunces,serif;font-weight:700;font-size:20px;margin-bottom:16px}
+  .step h3{font-size:21px;margin-bottom:8px}
+  .step p{color:var(--muted);font-size:16px}
+  @media(max-width:760px){.steps{grid-template-columns:1fr}}
+
+  /* plans */
+  .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px;align-items:stretch}
+  .plan{background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:30px;display:flex;flex-direction:column}
+  .plan.hl{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .plan.hl .muted,.plan.hl li{color:#d7e8e0}
+  .plan h3{font-size:22px}
+  .plan .muted{color:var(--muted);font-size:15px;margin:4px 0 20px}
+  .plan .price{font-family:Fraunces,serif;font-size:36px;font-weight:700}
+  .plan .price small{font-family:Inter;font-size:14px;font-weight:500}
+  .plan .mo{font-size:15px;margin-bottom:22px}
+  .plan ul{list-style:none;flex:1;margin-bottom:26px}
+  .plan li{font-size:15px;padding:6px 0 6px 26px;position:relative;color:var(--muted)}
+  .plan li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
+  .plan.hl li::before{color:var(--warm)}
+  .plan .btn{justify-content:center}
+  .plan.hl .btn{background:#fff;color:var(--accent)}
+  .plans-note{margin-top:20px;font-size:14px;color:var(--muted)}
+  @media(max-width:900px){.plans{grid-template-columns:1fr}}
+
+  /* about */
+  .about .wrap{display:grid;grid-template-columns:280px 1fr;gap:56px;align-items:center}
+  .photo{aspect-ratio:1;border-radius:50%;background:linear-gradient(135deg,#d9e7e0,#f3e2c4);display:grid;place-items:center;font-family:Fraunces,serif;font-size:72px;color:var(--accent);border:6px solid var(--surface);box-shadow:0 20px 40px -20px rgba(0,0,0,.25)}
+  .about p{color:var(--muted);margin-bottom:14px}
+  @media(max-width:760px){.about .wrap{grid-template-columns:1fr}.photo{max-width:200px}}
+
+  /* faq */
+  details{border-bottom:1px solid var(--line);padding:20px 0}
+  summary{cursor:pointer;font-weight:600;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+  summary::after{content:"+";color:var(--accent);font-size:24px;line-height:1}
+  details[open] summary::after{content:"–"}
+  details p{color:var(--muted);margin-top:10px}
+
+  /* cta */
+  .final{background:var(--ink);color:#fff;text-align:center}
+  .final h2{color:#fff}
+  .final p{color:#bdb6aa;margin:0 auto 32px;max-width:540px}
+  footer{padding:28px 0;font-size:14px;color:var(--muted);text-align:center}
+
+  .wa-float{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 24px rgba(0,0,0,.25);z-index:20}
+  .wa-float svg{width:30px;height:30px;fill:#fff}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#" class="logo">Heitor Silva <span>Sites</span></a>
+    <ul>
+      <li><a href="#para-quem">Para quem</a></li>
+      <li><a href="#como">Como funciona</a></li>
+      <li><a href="#planos">Planos</a></li>
+      <li><a href="#sobre">Sobre mim</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Belo Horizonte · Pampulha e região</p>
+      <h1>Seu negócio já é bem avaliado. <em>Agora falta ser encontrado.</em></h1>
+      <p>Eu crio sites profissionais para clínicas, consultórios, oficinas e comércios de BH. Seu cliente te acha no Google e chama direto no seu WhatsApp.</p>
+      <div class="ctas">
+        <a class="btn" href="https://wa.me/5531983663689?text=Ol%C3%A1%20Heitor!%20Quero%20saber%20mais%20sobre%20um%20site%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Conversar no WhatsApp</a>
+        <a class="btn ghost" href="#planos">Ver planos</a>
+      </div>
+      <p class="note">Mostro uma prévia do site do seu negócio antes de você fechar.</p>
+    </div>
+    <div class="mock" aria-hidden="true">
+      <div class="bar"><i></i><i></i><i></i></div>
+      <div class="body">
+        <span class="tag">Clínica Veterinária</span>
+        <h3>Seu negócio aqui</h3>
+        <div class="stars">★★★★★ 4,8 · 700+ avaliações no Google</div>
+        <div class="rows"><div style="width:92%"></div><div style="width:78%"></div><div style="width:85%"></div><div style="width:60%"></div></div>
+        <div class="wa">Agendar pelo WhatsApp</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">O problema</p>
+    <h2>Muita gente boa está invisível na internet</h2>
+    <p class="lead">Fiz um levantamento de centenas de negócios na região da Pampulha. Os resultados mostram como ainda é comum depender só do Instagram ou nem isso:</p>
+    <div class="stats">
+      <div class="stat"><b>73%</b><span>dos dentistas analisados não têm site próprio</span></div>
+      <div class="stat"><b>67%</b><span>das clínicas de estética também não</span></div>
+      <div class="stat"><b>780</b><span>avaliações tinha uma clínica veterinária sem site nenhum</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="para-quem">
+  <div class="wrap">
+    <p class="eyebrow">Para quem</p>
+    <h2>Sites pensados para o seu tipo de negócio</h2>
+    <p class="lead">Atendo todo tipo de estabelecimento, e cada site é montado em cima do que o seu cliente procura.</p>
+    <div class="segs">
+      <div class="seg"><div class="ico">🐾</div><h3>Veterinários e pet shops</h3><p>Serviços, emergência, banho e tosa e agendamento.</p></div>
+      <div class="seg"><div class="ico">🦷</div><h3>Dentistas</h3><p>Especialidades, convênios e consulta pelo WhatsApp.</p></div>
+      <div class="seg"><div class="ico">✨</div><h3>Estética e spa</h3><p>Uma página por procedimento, dentro das regras do conselho.</p></div>
+      <div class="seg"><div class="ico">🩺</div><h3>Fisio e psicologia</h3><p>Profissionais, especialidades e primeiros passos.</p></div>
+      <div class="seg"><div class="ico">🔧</div><h3>Oficinas</h3><p>Serviços, endereço e orçamento rápido.</p></div>
+      <div class="seg"><div class="ico">🔑</div><h3>Chaveiros</h3><p>Página direta para quem precisa de ajuda agora.</p></div>
+      <div class="seg"><div class="ico">🪨</div><h3>Marmorarias</h3><p>Galeria de obras, que é o que vende.</p></div>
+      <div class="seg"><div class="ico">🏪</div><h3>Comércio em geral</h3><p>Restaurantes, salões, lojas e o que mais você tiver.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="como">
+  <div class="wrap">
+    <p class="eyebrow">Como funciona</p>
+    <h2>Simples, sem dor de cabeça</h2>
+    <div class="steps">
+      <div class="step"><h3>A gente conversa</h3><p>Pelo WhatsApp ou pessoalmente. Entendo seu negócio e já te mostro uma prévia do seu site.</p></div>
+      <div class="step"><h3>Eu crio tudo</h3><p>Textos, fotos, layout, Google e WhatsApp. Você só aprova e pede ajustes.</p></div>
+      <div class="step"><h3>Seu site no ar</h3><p>Publicado com domínio próprio, e eu continuo cuidando da manutenção.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="planos">
+  <div class="wrap">
+    <p class="eyebrow">Planos</p>
+    <h2>Um valor justo para cada tamanho de negócio</h2>
+    <p class="lead">Criação paga uma vez, mais uma mensalidade que cobre hospedagem, domínio, manutenção e alterações.</p>
+    <div class="plans">
+      <div class="plan">
+        <h3>Essencial</h3>
+        <p class="muted">Para serviços rápidos e negócios menores</p>
+        <div class="price"><small>a partir de </small>R$ 800</div>
+        <div class="mo">+ R$ 59/mês</div>
+        <ul>
+          <li>Página única e rápida</li>
+          <li>Botão de WhatsApp</li>
+          <li>Endereço e mapa</li>
+          <li>Otimizado para o Google</li>
+        </ul>
+        <a class="btn ghost" href="https://wa.me/5531983663689?text=Ol%C3%A1%20Heitor!%20Tenho%20interesse%20no%20plano%20Essencial." target="_blank" rel="noopener">Quero esse</a>
+      </div>
+      <div class="plan hl">
+        <h3>Profissional</h3>
+        <p class="muted">O mais escolhido por consultórios e clínicas</p>
+        <div class="price"><small>a partir de </small>R$ 1.500</div>
+        <div class="mo">+ R$ 89/mês</div>
+        <ul>
+          <li>Tudo do Essencial</li>
+          <li>Até 5 páginas</li>
+          <li>Serviços e especialidades</li>
+          <li>Galeria de fotos</li>
+          <li>Avaliações do Google no site</li>
+        </ul>
+        <a class="btn" href="https://wa.me/5531983663689?text=Ol%C3%A1%20Heitor!%20Tenho%20interesse%20no%20plano%20Profissional." target="_blank" rel="noopener">Quero esse</a>
+      </div>
+      <div class="plan">
+        <h3>Completo</h3>
+        <p class="muted">Para clínicas grandes e várias especialidades</p>
+        <div class="price"><small>a partir de </small>R$ 2.800</div>
+        <div class="mo">+ R$ 129/mês</div>
+        <ul>
+          <li>Tudo do Profissional</li>
+          <li>Páginas ilimitadas</li>
+          <li>Uma página por serviço</li>
+          <li>Equipe e profissionais</li>
+          <li>Suporte prioritário</li>
+        </ul>
+        <a class="btn ghost" href="https://wa.me/5531983663689?text=Ol%C3%A1%20Heitor!%20Tenho%20interesse%20no%20plano%20Completo." target="_blank" rel="noopener">Quero esse</a>
+      </div>
+    </div>
+    <p class="plans-note">O valor final depende do tamanho do projeto. Te passo um orçamento fechado antes de começar.</p>
+  </div>
+</section>
+
+<section class="about" id="sobre">
+  <div class="wrap">
+    <div class="photo">HS</div>
+    <div>
+      <p class="eyebrow">Sobre mim</p>
+      <h2>Prazer, sou o Heitor</h2>
+      <p>Sou de Belo Horizonte e crio sites para negócios locais. Comecei porque vi muitos lugares excelentes, com dezenas ou centenas de avaliações no Google, perdendo clientes simplesmente por não terem um site.</p>
+      <p>Aqui você não fala com uma agência nem com atendente: fala direto comigo, do primeiro contato até depois do site no ar.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn ghost" href="https://instagram.com/heitor_marques_silva" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/heitor-marques-silva-66ba98379/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap" style="max-width:780px">
+    <p class="eyebrow">Dúvidas</p>
+    <h2>Perguntas frequentes</h2>
+    <details><summary>Eu já tenho Instagram. Preciso de site?</summary><p>O Instagram é ótimo para quem já te segue. O site é o que aparece quando alguém procura "dentista na Pampulha" no Google. Um completa o outro.</p></details>
+    <details><summary>Quanto tempo leva para ficar pronto?</summary><p>Na maioria dos casos, de 7 a 15 dias depois de recebidas as informações.</p></details>
+    <details><summary>O que a mensalidade cobre?</summary><p>Hospedagem, domínio, segurança, manutenção e pequenas alterações sempre que você precisar, como trocar preço, horário ou foto.</p></details>
+    <details><summary>Preciso entender de tecnologia?</summary><p>Não. Eu cuido de tudo, você só me manda as informações e aprova.</p></details>
+    <details><summary>Atende fora da Pampulha?</summary><p>Sim, atendo toda Belo Horizonte e região, e também online.</p></details>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Vamos colocar seu negócio no Google?</h2>
+    <p>Me chama no WhatsApp. Te mostro uma prévia do seu site sem compromisso.</p>
+    <a class="btn" style="background:#25d366" href="https://wa.me/5531983663689?text=Ol%C3%A1%20Heitor!%20Quero%20ver%20uma%20pr%C3%A9via%20do%20site%20do%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+  </div>
+</section>
+
+<footer>© 2026 Heitor Silva Sites · Belo Horizonte, MG · <a href="https://wa.me/5531983663689" target="_blank" rel="noopener">(31) 98366-3689</a> · <a href="https://instagram.com/heitor_marques_silva" target="_blank" rel="noopener">@heitor_marques_silva</a> · <a href="https://www.linkedin.com/in/heitor-marques-silva-66ba98379/" target="_blank" rel="noopener">LinkedIn</a></footer>
+
+<a class="wa-float" href="https://wa.me/5531983663689" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.2-.2-.2-.4-.3z"/></svg>
+</a>
+
+</body>
+</html>
