@@ -65,11 +65,8 @@
   .serp li{display:grid;grid-template-columns:1fr auto;gap:4px 14px;align-items:center;padding:14px 6px;border-top:1px solid var(--line)}
   .serp li b{font-weight:600;font-size:17px}
   .serp li small{grid-column:1;font-size:14px;color:var(--muted)}
-  .serp .st{color:var(--star);letter-spacing:1px}
   .serp .chip{grid-row:1 / span 2;grid-column:2;font-size:14px;font-weight:600;padding:7px 12px;border-radius:999px;white-space:nowrap}
   .serp .chip.no{background:#f3eee6;color:var(--muted)}
-  .serp .chip.yes{background:var(--navy);color:#fff}
-  .serp li.you{background:var(--navy-soft);border-radius:12px;border-top-color:transparent}
   .serp-cap{font-size:15px;color:var(--muted);margin-top:14px;padding:0 6px}
 
   /* dados */
@@ -114,7 +111,6 @@
   .about .wrap{display:grid;grid-template-columns:240px 1fr;gap:56px;align-items:center}
   .photo{aspect-ratio:1;border-radius:50%;background:var(--navy);display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:68px;color:#fff}
   .about p{color:var(--muted);margin-bottom:14px;max-width:60ch}
-  .about .links{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
   @media(max-width:760px){.about .wrap{grid-template-columns:1fr;gap:28px}.photo{max-width:160px}}
 
   /* faq */
@@ -161,7 +157,7 @@
   <div class="wrap">
     <div>
       <h1>Seu negócio já é bem avaliado. Falta ser encontrado.</h1>
-      <p>Eu crio sites para clínicas, consultórios, oficinas e comércios de Belo Horizonte. Quem procura no Google te acha e chama direto no seu WhatsApp.</p>
+      <p>Eu crio sites para negócios de Belo Horizonte. Quem procura no Google te acha e chama no seu WhatsApp.</p>
       <div class="ctas">
         <a class="btn" href="https://wa.me/5531983663689?text=Ol%C3%A1%20Heitor!%20Quero%20saber%20mais%20sobre%20um%20site%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>Conversar no WhatsApp</a>
         <a class="btn plain" href="#planos">Ver planos e preços</a>
@@ -169,15 +165,15 @@
     </div>
 
     <figure>
-      <div class="serp" role="img" aria-label="Exemplo de busca no Google por dentista na Pampulha: dois consultórios bem avaliados aparecem sem site e um aparece com site.">
-        <div class="q"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>dentista na pampulha</div>
+      <div class="serp">
+        <div class="q"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>veterinário na pampulha</div>
         <ol>
-          <li><b>Consultório Sorriso Leve</b><small><span class="st">★★★★★</span> 5,0 (141)</small><span class="chip no">Sem site</span></li>
-          <li><b>Odonto Lagoa</b><small><span class="st">★★★★★</span> 4,9 (98)</small><span class="chip no">Sem site</span></li>
-          <li class="you"><b>Seu consultório</b><small><span class="st">★★★★★</span> 4,9 (120)</small><span class="chip yes">Site</span></li>
+          <li><b>Clínica veterinária</b><small>4,8 de nota, 783 avaliações</small><span class="chip no">Sem site</span></li>
+          <li><b>Clínica e pet shop</b><small>4,8 de nota, 776 avaliações</small><span class="chip no">Sem site</span></li>
+          <li><b>Clínica veterinária</b><small>4,6 de nota, 734 avaliações</small><span class="chip no">Sem site</span></li>
         </ol>
       </div>
-      <figcaption class="serp-cap">Quem tem site ganha o clique. Exemplo com nomes fictícios.</figcaption>
+      <figcaption class="serp-cap">Casos reais do meu levantamento no Google Maps. Nomes omitidos.</figcaption>
     </figure>
   </div>
 </header>
@@ -186,7 +182,7 @@
   <div class="wrap">
     <div>
       <h2 id="dados">A maioria dos negócios da Pampulha não tem site próprio</h2>
-      <p class="lead">Eu pesquisei, categoria por categoria, quantos negócios bem avaliados no Google não têm um site pra mandar o cliente. Atendo todos esses e qualquer outro comércio.</p>
+      <p class="lead">Porcentagem de negócios sem site próprio, por categoria. Atendo todos esses e qualquer outro comércio.</p>
     </div>
     <div>
       <ul class="bars">
@@ -208,7 +204,6 @@
 <section id="como" aria-labelledby="como-t">
   <div class="wrap">
     <h2 id="como-t">Como funciona</h2>
-    <p class="lead">Você não precisa entender de tecnologia. Eu cuido de tudo.</p>
     <ol class="steps">
       <li><h3>A gente conversa</h3><p>Pelo WhatsApp ou pessoalmente. Antes de você decidir, eu te mostro uma prévia do site do seu negócio.</p></li>
       <li><h3>Eu monto o site</h3><p>Textos, fotos, mapa, Google e botão de WhatsApp. Você aprova e pede os ajustes que quiser.</p></li>
@@ -223,11 +218,7 @@
     <div>
       <h2 id="sobre-t">Prazer, sou o Heitor</h2>
       <p>Sou de Belo Horizonte e crio sites para negócios daqui. Comecei porque vi muito lugar bom, com centenas de avaliações no Google, perdendo cliente por não ter um site.</p>
-      <p>Você fala direto comigo, do primeiro contato até depois do site no ar. Sem agência e sem atendente.</p>
-      <div class="links">
-        <a class="btn plain" href="https://instagram.com/heitor_marques_silva" target="_blank" rel="noopener">Meu Instagram</a>
-        <a class="btn plain" href="https://www.linkedin.com/in/heitor-marques-silva-66ba98379/" target="_blank" rel="noopener">Meu LinkedIn</a>
-      </div>
+      <p>Você fala direto comigo, do primeiro contato até depois do site no ar.</p>
     </div>
   </div>
 </section>
@@ -235,7 +226,7 @@
 <section id="planos" aria-labelledby="planos-t">
   <div class="wrap">
     <h2 id="planos-t">Planos e preços</h2>
-    <p class="lead">Você paga a criação uma vez e uma mensalidade que cobre hospedagem, endereço do site, manutenção e alterações.</p>
+    <p class="lead">Você paga a criação uma vez e depois uma mensalidade.</p>
     <div class="plans">
       <div class="plan">
         <h3>Essencial</h3>
@@ -289,7 +280,6 @@
     <details><summary>Eu já tenho Instagram. Preciso de site?</summary><p>O Instagram funciona pra quem já te segue. O site é o que aparece quando alguém procura "dentista na Pampulha" no Google. Um completa o outro.</p></details>
     <details><summary>Quanto tempo leva pra ficar pronto?</summary><p>Na maioria dos casos, de 7 a 15 dias depois que eu recebo as informações e fotos.</p></details>
     <details><summary>O que a mensalidade cobre?</summary><p>Hospedagem, endereço do site (domínio), segurança, manutenção e pequenas alterações sempre que precisar, como trocar preço, horário ou foto.</p></details>
-    <details><summary>Atende fora da Pampulha?</summary><p>Sim. Atendo toda Belo Horizonte e região, pessoalmente ou online.</p></details>
   </div>
 </section>
 
