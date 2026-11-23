@@ -73,22 +73,15 @@ nav ul a:hover{color:var(--navy)}
 .steps p{color:var(--muted);font-size:17px}
 @media(max-width:760px){.steps{grid-template-columns:1fr;gap:32px}}
 
-/* planos */
-.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
-.plan{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:30px;display:flex;flex-direction:column}
-.plan.hl{background:var(--navy);border-color:var(--navy);color:#fff}
-.plan.hl h3,.plan.hl .price{color:#fff}
-.plan.hl .for,.plan.hl li,.plan.hl .mo{color:var(--navy-mid)}
-.plan .for{color:var(--muted);font-size:16px;margin:6px 0 22px;min-height:2.6em}
-.plan .price{font-family:var(--display);font-size:40px;font-weight:800;color:var(--navy);line-height:1}
-.plan .price small{font-family:var(--body);font-size:15px;font-weight:500;display:block;margin-bottom:6px;color:inherit;opacity:.75}
-.plan .mo{font-size:16px;color:var(--muted);margin:8px 0 24px}
-.plan ul{list-style:none;flex:1;margin-bottom:28px}
-.plan li{font-size:16px;padding:6px 0 6px 26px;position:relative;color:var(--muted)}
-.plan li::before{content:"✓";position:absolute;left:0;color:var(--navy);font-weight:700}
-.plan.hl li::before{color:#fff}
-.plans-note{margin-top:22px;font-size:16px;color:var(--muted)}
-@media(max-width:900px){.plans{grid-template-columns:1fr}}
+/* orçamento */
+.quote{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start}
+.factors{list-style:none;margin-top:24px}
+.factors li{padding:14px 0;border-top:1px solid var(--line);color:var(--muted)}
+.factors b{color:var(--navy);font-weight:600}
+.quote-box{background:var(--navy);color:var(--navy-mid);border-radius:20px;padding:36px}
+.quote-box h3{color:#fff;font-size:26px;margin-bottom:12px}
+.quote-box p{margin-bottom:28px}
+@media(max-width:880px){.quote{grid-template-columns:1fr;gap:32px}}
 
 /* sobre */
 .about{background:var(--surface);border-block:1px solid var(--line)}
