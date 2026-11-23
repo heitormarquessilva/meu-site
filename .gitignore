@@ -1,0 +1,7 @@
+# Sites de exemplo e de clientes: cada um tem o próprio repositório no GitHub
+exemplo-veterinaria/
+exemplo-saude/
+
+# Arquivos do Mac e configuração local do Claude
+.DS_Store
+.claude/
