@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="84 18 140 140" width="512" height="512">
+  <title>Heitor Silva Sites</title>
+  <circle cx="150" cy="88" r="58" fill="#14213D"/>
+  <circle cx="150" cy="88" r="48" fill="none" stroke="#F7F3EC" stroke-width="2" stroke-opacity=".35"/>
+  <text x="150" y="106" text-anchor="middle" font-family="'Bricolage Grotesque','Arial Black',Arial,sans-serif" font-weight="800" font-size="48" letter-spacing="-2" fill="#F7F3EC">HS</text>
+  <line x1="98" y1="142" x2="202" y2="42" stroke="#25D366" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="98" cy="142" r="8" fill="#25D366"/>
+  <polygon points="218,27 209.6,52.8 191.6,34" fill="#25D366"/>
+</svg>

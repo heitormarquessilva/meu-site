@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 160" width="1120" height="320">
+  <title>Heitor Silva Sites</title>
+  <g transform="translate(-74,-8)">
+    <circle cx="150" cy="88" r="58" fill="#14213D"/>
+    <circle cx="150" cy="88" r="48" fill="none" stroke="#F7F3EC" stroke-width="2" stroke-opacity=".35"/>
+    <text x="150" y="106" text-anchor="middle" font-family="'Bricolage Grotesque','Arial Black',Arial,sans-serif" font-weight="800" font-size="48" letter-spacing="-2" fill="#F7F3EC">HS</text>
+    <line x1="98" y1="142" x2="202" y2="42" stroke="#25D366" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="98" cy="142" r="8" fill="#25D366"/>
+    <polygon points="218,27 209.6,52.8 191.6,34" fill="#25D366"/>
+  </g>
+  <text x="168" y="82" font-family="'Bricolage Grotesque','Arial Black',Arial,sans-serif" font-weight="800" font-size="52" fill="#14213D">Heitor Silva</text>
+  <text x="170" y="118" font-family="Figtree,Arial,sans-serif" font-weight="600" font-size="20" letter-spacing="4" fill="#1a8f4a">SITES PARA NEGÓCIOS</text>
+</svg>
