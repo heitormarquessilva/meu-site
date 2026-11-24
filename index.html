@@ -147,9 +147,36 @@
       </ul>
     </div>
     <div class="quote-box">
-      <h3>Como pedir seu orçamento</h3>
-      <p>Me manda uma mensagem contando o que é o seu negócio. Eu te respondo com uma prévia e o valor fechado, antes de você decidir qualquer coisa. Você paga metade no começo e metade quando receber o site.</p>
-      <a class="btn" href="https://wa.me/5531983663689?text=Ol%C3%A1%20Heitor!%20Quero%20um%20or%C3%A7amento%20para%20o%20site%20do%20meu%20neg%C3%B3cio." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>Pedir orçamento</a>
+      <h3>Peça seu orçamento</h3>
+      <p>Preencha e o WhatsApp abre com a mensagem pronta. Eu te respondo com uma prévia e o valor fechado. Você paga metade no começo e metade quando receber o site.</p>
+      <form class="orc" id="orc" novalidate>
+        <div><label for="orc-nome">Seu nome</label><input id="orc-nome" name="nome" autocomplete="given-name" required></div>
+        <div><label for="orc-neg">Nome do negócio <span>(opcional)</span></label><input id="orc-neg" name="negocio" autocomplete="organization"></div>
+        <div><label for="orc-tipo">Tipo de negócio</label>
+          <select id="orc-tipo" name="tipo" required>
+            <option value="">Escolha</option>
+            <option>Clínica veterinária ou pet shop</option>
+            <option>Dentista</option>
+            <option>Clínica de estética</option>
+            <option>Fisioterapia ou psicologia</option>
+            <option>Oficina</option>
+            <option>Restaurante ou lanchonete</option>
+            <option>Salão de beleza</option>
+            <option>Outro</option>
+          </select></div>
+        <fieldset><legend>O que você precisa no site</legend>
+          <div class="chips">
+            <label><input type="checkbox" name="itens" value="Lista de serviços">Serviços</label>
+            <label><input type="checkbox" name="itens" value="Galeria de fotos">Fotos</label>
+            <label><input type="checkbox" name="itens" value="Agendamento">Agendamento</label>
+            <label><input type="checkbox" name="itens" value="Cardápio">Cardápio</label>
+            <label><input type="checkbox" name="itens" value="Endereço e mapa">Mapa</label>
+          </div></fieldset>
+        <div><label for="orc-obs">Algo mais? <span>(opcional)</span></label><textarea id="orc-obs" name="obs" rows="2"></textarea></div>
+        <p class="orc-erro" id="orc-erro" role="alert"></p>
+        <button class="btn" type="submit"><svg aria-hidden="true"><use href="#wa"/></svg>Pedir orçamento pelo WhatsApp</button>
+      </form>
+      <noscript><a class="btn" href="https://wa.me/5531983663689?text=Ol%C3%A1%20Heitor!%20Quero%20um%20or%C3%A7amento%20para%20o%20site%20do%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Pedir orçamento</a></noscript>
     </div>
   </div>
 </section>
@@ -187,5 +214,6 @@
   <svg aria-hidden="true"><use href="#wa"/></svg>
 </a>
 
+<script src="script.js" defer></script>
 </body>
 </html>

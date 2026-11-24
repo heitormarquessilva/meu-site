@@ -94,7 +94,20 @@ nav ul a:hover{color:var(--navy)}
 .factors b{color:var(--navy);font-weight:600}
 .quote-box{background:var(--navy);color:var(--navy-mid);border-radius:20px;padding:36px}
 .quote-box h3{color:#fff;font-size:26px;margin-bottom:12px}
-.quote-box p{margin-bottom:28px}
+.quote-box p{margin-bottom:24px}
+.orc{display:grid;gap:16px}
+.orc label,.orc legend{display:block;font-size:15px;color:#fff;font-weight:500;margin-bottom:6px}
+.orc label span{color:var(--navy-mid);font-weight:400}
+.orc input:not([type=checkbox]),.orc select,.orc textarea{width:100%;padding:12px 14px;border:1px solid #3a4a6e;border-radius:10px;background:#1d2c4f;color:#fff;font:inherit;font-size:16px}
+.orc select option{color:var(--ink);background:#fff}
+.orc fieldset{border:0;padding:0;margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{display:inline-flex;align-items:center;gap:8px;margin:0;padding:8px 14px;border:1px solid #3a4a6e;border-radius:999px;font-weight:400;cursor:pointer}
+.chips label:has(input:checked){background:#fff;color:var(--navy);border-color:#fff}
+.chips input{accent-color:var(--cta)}
+.orc-erro{min-height:1.2em;margin:0!important;color:#ffb4a8;font-size:15px}
+.orc .btn{justify-self:start;border:0;cursor:pointer;font-family:inherit}
+.orc :focus-visible{outline-color:var(--cta)}
 @media(max-width:880px){.quote{grid-template-columns:1fr;gap:32px}}
 
 /* sobre */
