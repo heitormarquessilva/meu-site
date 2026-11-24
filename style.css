@@ -133,3 +133,5 @@ footer ul{display:flex;gap:20px;list-style:none;flex-wrap:wrap}
 .cursor{display:inline-block;width:2px;height:1.1em;background:var(--navy);margin-left:1px;vertical-align:-.15em;animation:piscar 1s steps(1) infinite}
 @keyframes piscar{50%{opacity:0}}
 .bars .f{transition:width 1s cubic-bezier(.2,.7,.2,1)}
+.case{transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
+.case.oculto{opacity:0;transform:translateY(24px)}

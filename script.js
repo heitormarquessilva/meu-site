@@ -30,6 +30,21 @@
     }, 65);
   }
 
+  // 3. Prints da seção "Sites que eu fiz" aparecendo um de cada vez
+  var cases = document.querySelectorAll('.case');
+  if (cases.length && 'IntersectionObserver' in window) {
+    cases.forEach(function (c) { c.classList.add('oculto'); });
+    var obsCases = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        obsCases.unobserve(e.target);
+        var n = Array.prototype.indexOf.call(cases, e.target);
+        setTimeout(function () { e.target.classList.remove('oculto'); }, (n % 3) * 150);
+      });
+    }, { threshold: 0.25 });
+    cases.forEach(function (c) { obsCases.observe(c); });
+  }
+
   // 2. Barras do levantamento enchendo quando aparecem na tela
   var lista = document.querySelector('.bars');
   if (!lista || !('IntersectionObserver' in window)) return;
