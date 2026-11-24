@@ -100,9 +100,9 @@ nav ul a:hover{color:var(--navy)}
 /* sobre */
 .about{background:var(--surface);border-block:1px solid var(--line)}
 .about .wrap{display:grid;grid-template-columns:240px 1fr;gap:56px;align-items:center}
-.photo{aspect-ratio:1;display:grid;place-items:center}
-.photo img{width:100%;height:auto}
-@media (prefers-reduced-motion:no-preference){.photo img{animation:girar 14s linear infinite}.photo:hover img{animation-play-state:paused}}
+.photo{aspect-ratio:1;border-radius:50%;background:var(--navy);display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:68px;color:#fff}
+.photo span{display:block}
+@media (prefers-reduced-motion:no-preference){.photo span{animation:girar 14s linear infinite}.photo:hover span{animation-play-state:paused}}
 @keyframes girar{to{transform:rotate(360deg)}}
 .about p{color:var(--muted);margin-bottom:14px;max-width:60ch}
 @media(max-width:760px){.about .wrap{grid-template-columns:1fr;gap:28px}.photo{max-width:160px}}
