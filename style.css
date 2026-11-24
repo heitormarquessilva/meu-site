@@ -126,3 +126,10 @@ footer ul{display:flex;gap:20px;list-style:none;flex-wrap:wrap}
 .wa-float svg{width:30px;height:30px;fill:var(--cta-ink)}
 
 @media(max-width:480px){.hero h1{font-size:9.6vw;line-height:1.05}}
+
+/* animações (script.js) */
+.serp li{transition:opacity .4s ease,transform .4s ease}
+.serp li.oculto{opacity:0;transform:translateY(6px)}
+.cursor{display:inline-block;width:2px;height:1.1em;background:var(--navy);margin-left:1px;vertical-align:-.15em;animation:piscar 1s steps(1) infinite}
+@keyframes piscar{50%{opacity:0}}
+.bars .f{transition:width 1s cubic-bezier(.2,.7,.2,1)}
